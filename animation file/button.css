@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #373737;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
+}
+button{
+    margin: 10px;
+    padding: 20px 70px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    background: #000;
+    letter-spacing: 1px;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+button:first-child{
+    border: 2px solid green;
+    color: green;
+    box-shadow: 0 0 20px 0 green;
+}
+button:nth-child(2){
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0 0 20px 0 white;
+}
+button:last-child{
+    border: 2px solid green;
+    color: green;
+    box-shadow: 0 0 20px 0 green;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    top: -7.5px;
+    left: -2px;
+    width: 30px;
+    height: 10px;
+    transition: 0.5s;
+    background: #000;
+    z-index: -1;
+    border-radius: 30%;
+}
+button:first-child::before{
+    border: 2px solid green;
+}
+button:nth-child(2)::before{
+    border: 2px solid white;
+}
+button:last-child::before{
+    border: 2px solid green;
+}
+button::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    right: -2px;
+    width: 30px;
+    height: 10px;
+    transition: 0.5s;
+    background: #000;
+    z-index: -1;
+    border-radius: 30%;
+}
+
+button:first-child::after{
+    border: 2px solid green;
+}
+button:nth-child(2)::after{
+    border: 2px solid white;
+}
+button:last-child::after{
+    border: 2px solid green;
+}
+
+button:hover::before{
+    left: calc(100% - 32px);
+}
+button:hover::after{
+    right: calc(100% - 32px);
+}
+
+button:hover{
+    color: #000;
+}
+button:first-child:hover{
+    background: green;
+    box-shadow: 0 0 60px 0 green;
+}
+button:nth-child(2):hover{
+    background: white;
+    box-shadow: 0 0 60px 0 white;
+}
+button:last-child:hover{
+    background: green;
+    box-shadow: 0 0 60px 0 green;
+}
